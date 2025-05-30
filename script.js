@@ -1,4 +1,4 @@
-emailjs.init('kbxgl-dlpla8thBim');
+emailjs.init('RyZM_-oq9QD8YPYha');
 document
   .getElementById("contact-form")
   .addEventListener("submit", function (event) {
@@ -8,7 +8,7 @@ document
     const message = document.getElementById("message").value;
 
     emailjs
-      .send("service_sivw9sf", "template_4fowrum", {
+      .send("service_tte6rzf", "template_nvduz4t", {
         from_name: name,
         from_email: email,
         message: message,
@@ -48,37 +48,3 @@ function showResponseMessage(message, color) {
   }, 5000);
 }
 
-async function getAccessToken() {
-  const clientId = '';
-  const clientSecret = '';
-
-  const tokenUrl = 'https://accounts.spotify.com/api/token';
-
-  const headers = new Headers();
-  headers.append('Authorization', 'Basic ' + btoa(clientId + ':' + clientSecret));
-  headers.append('Content-Type', 'application/x-www-form-urlencoded');
-
-  const body = new URLSearchParams();
-  body.append('grant_type', 'client_credentials');
-
-  try {
-      const response = await fetch(tokenUrl, {
-          method: 'POST',
-          headers: headers,
-          body: body
-      });
-
-      if (!response.ok) throw new Error('Token Request Failed');
-
-      const data = await response.json();
-      const accessToken = data.access_token;
-
-      console.log('Access Token:', accessToken);
-      return accessToken;
-
-  } catch (error) {
-      console.error('Error fetching the access token:', error);
-  }
-}
-
-getAccessToken();
