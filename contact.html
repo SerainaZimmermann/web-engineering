@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt | Mein Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+</head>
+<body>
+    <header>
+        <div class="header-label">Mein Portfolio</div>
+        <div class="header-content">
+            <a href="index.html" class="home-link">
+                <img src="knittingicon.png" alt="Home" class="home-icon">
+            </a>
+        </div>
+        <nav>
+            <a href="about.html">Über mich</a>
+            <a href="projects.html">Projekte</a>
+            <a href="contact.html">Kontakt</a>
+        </nav>
+    </header>
+    
+    <div id="spotify-container">
+        <iframe 
+            src="https://open.spotify.com/playlist/65OJqdNQ9FkkvQc8aScVWA?si=PnRIdpbLQ8upYOF82Whrng&pi=EDxM1zdgQ0eQF"
+            width="100%" height="380" frameborder="0" allowfullscreen=""
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+            loading="lazy">
+        </iframe>
+        <button id="toggle-button"></button>
+    </div>
+    
+    <div class="content">
+        <h2>Kontaktdetails</h2>
+        <p>Wenn Sie Fragen haben oder mit mir in Kontakt treten möchten, füllen Sie bitte das folgende Formular aus:</p>
+        
+        <form id="contact-form">
+            <p>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+        
+            <label for="email">E-Mail:</label>
+            <input type="email" id="email" name="email" required>
+        
+            <label for="message">Nachricht:</label>
+            <textarea id="message" name="message" required></textarea>
+        
+            <button type="submit" id="send-button">Absenden</button>
+            </p>
+        </form>
+        
+        <div class="contact-info">
+            <h3>Alternativ können Sie mich unter folgenden Kontaktdetails erreichen:</h3>
+            <p><strong>E-Mail:</strong> seraina.zimmermann@students.bfh.ch</p>
+            <p><strong>Telefon:</strong> +41 31 543  52 08</p>
+        </div>
+    </div>
+
+    <div class="fact-banner">
+        <div class="fact-title">Zahlen</div>
+        <div id="factText" class="fact-text">Hier erscheinen ein paar Zahlen zu meiner Person.</div>
+    </div>
+
+    <script>
+        const facts = [
+            "<span class='fact-number'>155</span>: Meine Grösse in cm",
+            "<span class='fact-number'>3</span>: Anzahl der Sprachen, die ich spreche",
+            "<span class='fact-number'>3</span>: Jahre, die ich Häkle",
+            "<span class='fact-number'>2003</span>: Mein Geburtsjahr",
+            "<span class='fact-number'>2022</span>: Jahr in dem ich mein Studium begonnen habe",
+            "<span class='fact-number'>3-4</span>: Wie viel Stunden ich in der Woche Sport mache",
+            "<span class='fact-number'>3</span>: In wie vielen Kantone ich zu Hause bin",
+            "<span class='fact-number'>38</span>: Meine Schuhgrösse",
+            "<span class='fact-number'>19.03.</span>: Mein Geburtstag"
+        ];
+    
+    const colors = ['#FF5733', '#33FF57', '#3357FF', '#F033FF', '#FF33F0', '#F0F033', '#33F0FF'];
+    let lastColor = null;
+    
+    function getRandomColor() {
+        let newColor;
+        do {
+            const randomIndex = Math.floor(Math.random() * colors.length);
+            newColor = colors[randomIndex];
+        } while (newColor === lastColor);
+        lastColor = newColor;
+        return newColor;
+    }
+    
+    let lastFactIndex = -1;
+    
+    function getRandomFact() {
+        let randomIndex;
+        do {
+            randomIndex = Math.floor(Math.random() * facts.length);
+        } while (randomIndex === lastFactIndex);
+        lastFactIndex = randomIndex;
+        return facts[randomIndex];
+    }
+    
+    
+    let currentFact = getRandomFact();
+    
+    function changeFact() {
+        const factTextElement = document.getElementById("factText");
+    
+        factTextElement.innerHTML = currentFact;
+    
+        const factNumberElement = factTextElement.querySelector('.fact-number');
+        if (factNumberElement) {
+            factNumberElement.style.color = getRandomColor();
+        }
+    
+        currentFact = getRandomFact();
+    }
+    
+    setInterval(changeFact, 14000);
+    
+    const homeIcon = document.querySelector('.home-icon');
+    
+    document.addEventListener('mousemove', (event) => {
+    const mouseX = event.clientX;
+    const mouseY = event.clientY;
+    
+    const rect = homeIcon.getBoundingClientRect();
+    const iconX = rect.left + rect.width / 2;
+    const iconY = rect.top + rect.height / 2;
+    
+    const angle = Math.atan2(mouseY - iconY, mouseX - iconX) * (180 / Math.PI);
+    
+    const isAbove = mouseX < iconX;
+    
+    let transform = `rotate(${angle}deg)`;
+    
+    if (isAbove) {
+        transform += ` scaleY(-1)`;
+    } else {
+        transform += ` scaleY(1)`;
+    }
+    
+    homeIcon.style.transform = transform;
+    });
+
+    document.addEventListener("DOMContentLoaded", function () {
+    const spotifyContainer = document.getElementById("spotify-container");
+    const toggleButton = document.getElementById("toggle-button");
+
+    toggleButton.addEventListener("click", function () {
+        spotifyContainer.classList.toggle("open");
+    });
+});
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
