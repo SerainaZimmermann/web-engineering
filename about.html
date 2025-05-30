@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Über mich</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="header-label">Mein Portfolio</div>
+        <div class="header-content">
+            <a href="index.html" class="home-link">
+                <img src="knittingicon.png" alt="Home" class="home-icon">
+            </a>
+        </div>
+        <nav>
+            <a href="about.html">Über mich</a>
+            <a href="projects.html">Projekte</a>
+            <a href="contact.html">Kontakt</a>
+        </nav>
+    </header>
+    
+    <div id="spotify-container">
+        <iframe 
+            src="https://open.spotify.com/playlist/65OJqdNQ9FkkvQc8aScVWA?si=PnRIdpbLQ8upYOF82Whrng&pi=EDxM1zdgQ0eQF"
+            width="100%" height="380" frameborder="0" allowfullscreen=""
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+            loading="lazy">
+        </iframe>
+        <button id="toggle-button"></button>
+    </div>
+    
+        </nav>
+    </header>
+    
+    <div class="profile">
+        <img src="me.jpg" alt="Profilbild">
+        <div class="profile-text">
+            <h2>Über mich</h2>
+            <p>Mein Name ist Seraina Zimmermann. Ich bin aktuell Bachelor Studentin an der BFH im Studiengang Wirtschaftsinformatik mit der Vertiefung Business Data Analytics.
+                 Im Rahmen meines Studiums habe ich bisher Erfahrungen in der Entwicklung von Webseiten gesammelt und bereits an einigen 
+                 Prototypen.</p>
+        </div>
+    </div>
+    <div class="profile">
+        <div class="profile-text">
+            <h2>Erfahrungen</h2>
+            <p>Ich habe während meines Studiums an verschiedenen Projekten gearbeitet, die mir ermöglicht haben, meine Fähigkeiten in der Frontend-Entwicklung sowie im Bereich Künstliche Intelligenz zu vertiefen. Dabei lag mein Fokus auf reaktiven Benutzeroberflächen und datengetriebenen Anwendungen.</p>
+        </div>
+        <img src="cats.jpg" alt="Erfahrungen" class="profile-image">
+    </div>
+    <div class="profile">
+        <img src="me.jpg" alt="Profilbild">
+        <div class="profile-text">
+            <h2>Interessen</h2>
+            <p>Ich interessiere mich sehr für Daten von Sammeln über Rohdaten bearbeitung bis zur Visualisierung. Ausserdem verfolge ich noch einige Hobbies wie Häkeln, Stricken, Snowboarden, Velo fahrens und mit Freunden Dinge unternehmen wie Festival besuche im Sommer. Im Verlauf meines Studiums habe ich ausserdem ein Interesse am Kodieren und dem Programmieren von Webseiten entwickelt.</p>
+        </div>
+    </div>
+
+    <div class="timeline-container">
+        <h2 class="timeline-title">Lebenslauf:</h2>
+        <div class="timeline">
+            <div class="timeline-event" style="left: 0%">
+                <div class="dot"></div>
+                <div class="event-content">
+                    <p>2003: Geburtsjahr</p>
+                </div>
+            </div>
+            <div class="timeline-event" style="left: 33.3%">
+                <div class="dot"></div>
+                <div class="event-content">
+                    <p>2009: Beginn Primarschule</p>
+                </div>
+            </div>
+            <div class="timeline-event" style="left: 61.9%">
+                <div class="dot"></div>
+                <div class="event-content">
+                    <p>2015: Beginn Sekundarschule</p>
+                </div>
+            </div>
+            <div class="timeline-event" style="left: 76.2%">
+                <div class="dot"></div>
+                <div class="event-content">
+                    <p>2018: Beginn Detailhandelsfachfrau EFZ <Uhren-Schmuck-Edelsteine></Uhren-Schmuck-Edelsteine></p>
+                </div>
+            </div>
+            <div class="timeline-event" style="left: 85.7%">
+                <div class="dot"></div>
+                <div class="event-content">
+                    <p>2021: Beginn Berufsmaturitätsschule Gesundheit und Soziales</p>
+                </div>
+            </div>
+            <div class="timeline-event" style="left: 90.5%">
+                <div class="dot"></div>
+                <div class="event-content">
+                    <p>2022: Beginn und bis heute BSc Wirtschaftsinformatik BFH</p>
+                </div>
+            </div>
+            <div class="timeline-event" style="left: 95.2%">
+                <div class="dot"></div>
+                <div class="event-content">
+                    <p>2023: Beginn Praktikum IT Resilience</p>
+                </div>
+            </div>
+            <div class="timeline-event" style="left: 100%">
+                <div class="dot"></div>
+                <div class="event-content">
+                    <p>2024: Beginn Aushilfe in der Abteilung Industrie 4.0</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="fact-banner">
+        <div class="fact-title">Zahlen</div>
+        <div id="factText" class="fact-text">Hier erscheinen ein paar Zahlen zu meiner Person.</div>
+    </div>
+    
+    <div class="content-language-whole">
+
+        <div class="content-language">
+        <h2>Sprachkenntnisse</h2>
+
+        <div class="slider-container">
+            <label for="languageSlider">Deutsch</label>
+            <input type="range" id="languageSlider" min="0" max="60" value="60" step="10" disabled>
+            <div class="slider-value">Muttersprache</div>
+        </div>
+        <div class="slider-container">
+            <label for="languageSlider">Englisch</label>
+            <input type="range" id="languageSlider" min="0" max="60" value="50" step="10" disabled>
+            <div class="slider-value">Verhandlungssicher</div>
+        </div>
+        <div class="slider-container">
+            <label for="languageSlider">Französisch</label>
+            <input type="range" id="languageSlider" min="0" max="60" value="30" step="10" disabled>
+            <div class="slider-value">B1</div>
+        </div>
+    </div>
+        <div class="content-language">
+        <h2>Programmiersprachen</h2>
+        <div class="slider-container">
+            <label for="languageSlider">Python</label>
+            <input type="range" id="languageSlider" min="0" max="60" value="40" step="10" disabled>
+            <div class="slider-value">Gute Kenntnisse</div>
+        </div>
+        <div class="slider-container">
+            <label for="languageSlider">R</label>
+            <input type="range" id="languageSlider" min="0" max="60" value="50" step="10" disabled>
+            <div class="slider-value">Fortgeschrittene Kenntnisse</div>
+        </div>
+        <div class="slider-container">
+            <label for="languageSlider">HTML</label>
+            <input type="range" id="languageSlider" min="0" max="60" value="50" step="10" disabled>
+            <div class="slider-value">Fortgeschrittene Kenntnisse</div>
+        </div>
+        <div class="slider-container">
+            <label for="languageSlider">CSS</label>
+            <input type="range" id="languageSlider" min="0" max="60" value="50" step="10" disabled>
+            <div class="slider-value">Fortgeschrittene Kenntnisse</div>
+        </div>
+    </div>
+    </div>
+    
+<script>
+    const facts = [
+            "<span class='fact-number'>155</span>: Meine Grösse in cm",
+            "<span class='fact-number'>3</span>: Anzahl der Sprachen, die ich spreche",
+            "<span class='fact-number'>3</span>: Jahre, die ich Häkle",
+            "<span class='fact-number'>2003</span>: Mein Geburtsjahr",
+            "<span class='fact-number'>2022</span>: Jahr in dem ich mein Studium begonnen habe",
+            "<span class='fact-number'>3-4</span>: Wie viel Stunden ich in der Woche Sport mache",
+            "<span class='fact-number'>3</span>: In wie vielen Kantone ich zu Hause bin",
+            "<span class='fact-number'>38</span>: Meine Schuhgrösse",
+            "<span class='fact-number'>19.03.</span>: Mein Geburtstag"
+        ];
+
+const colors = ['#FF5733', '#33FF57', '#3357FF', '#F033FF', '#FF33F0', '#F0F033', '#33F0FF'];
+let lastColor = null;
+
+function getRandomColor() {
+    let newColor;
+    do {
+        const randomIndex = Math.floor(Math.random() * colors.length);
+        newColor = colors[randomIndex];
+    } while (newColor === lastColor);
+    lastColor = newColor;
+    return newColor;
+}
+
+let lastFactIndex = -1;
+
+function getRandomFact() {
+    let randomIndex;
+    do {
+        randomIndex = Math.floor(Math.random() * facts.length);
+    } while (randomIndex === lastFactIndex);
+    lastFactIndex = randomIndex;
+    return facts[randomIndex];
+}
+
+let currentFact = getRandomFact();
+
+function changeFact() {
+    const factTextElement = document.getElementById("factText");
+
+    factTextElement.innerHTML = currentFact;
+
+    const factNumberElement = factTextElement.querySelector('.fact-number');
+    if (factNumberElement) {
+        factNumberElement.style.color = getRandomColor();
+    }
+    currentFact = getRandomFact();
+}
+
+setInterval(changeFact, 14000);
+
+const homeIcon = document.querySelector('.home-icon');
+
+document.addEventListener('mousemove', (event) => {
+const mouseX = event.clientX;
+const mouseY = event.clientY;
+
+const rect = homeIcon.getBoundingClientRect();
+const iconX = rect.left + rect.width / 2;
+const iconY = rect.top + rect.height / 2;
+
+const angle = Math.atan2(mouseY - iconY, mouseX - iconX) * (180 / Math.PI);
+
+const isAbove = mouseX < iconX;
+
+let transform = `rotate(${angle}deg)`;
+
+if (isAbove) {
+    transform += ` scaleY(-1)`;
+} else {
+    transform += ` scaleY(1)`;
+}
+
+homeIcon.style.transform = transform;
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+    const spotifyContainer = document.getElementById("spotify-container");
+    const toggleButton = document.getElementById("toggle-button");
+
+    toggleButton.addEventListener("click", function () {
+        spotifyContainer.classList.toggle("open");
+    });
+});
+    </script>
+</body>
+</html>
